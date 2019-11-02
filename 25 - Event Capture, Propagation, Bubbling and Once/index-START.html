@@ -42,6 +42,24 @@
 
 <button></button>
 <script>
+const divs = document.querySelectorAll('div');
+const button = document.querySelector('button');
+
+function logText(e) {
+  console.log(this.classList.value);
+  // e.stopPropagation(); // stops the bubbling. so won't capture events on a parent
+}
+
+divs.forEach(div => div.addEventListener('click', logText, {
+  capture: false,
+  once: true
+}));
+
+button.addEventListener('click', () => {
+  console.log('click!!!');
+}, {
+  once: true
+}); // use this when you want a user to be able to click a button ONLY ONCE. good for store checkouts
 
 </script>
 </body>
