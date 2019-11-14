@@ -121,6 +121,28 @@
     }, {});
     console.log(transportation);
 
+    
+    // make a new array with all of the unique values using a for loop
+    const arrayWithDupes = [1, 2, 3, 4, 4, "j", 5, "j", 5, 7, "l", "m", "o"]
+
+    // let solution = arr => {
+    //   let uniqueItems = {};
+    //   arr.forEach(i => {
+    //     if (!uniqueItems[i]) {
+    //       uniqueItems[i] = true;
+    //     }
+    //   })
+    //   console.info(uniqueItems);
+    //   return Object.keys(uniqueItems)
+    // }
+
+    // console.log(solution(arrayWithDupes));
+
+    // make the solution more advanced by using set
+    let sortedArr = arrayWithDupes.sort();
+    let newSet = new Set(sortedArr);
+    console.log([...newSet]);
+
   </script>
 </body>
 </html>
